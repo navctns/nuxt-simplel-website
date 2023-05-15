@@ -2,12 +2,6 @@
   <header class="header" :class="{'open': navbarExpand}">
     <div class="overlay has-fade"></div>
     <nav id="header-nav" class="flex container flex-j-c-sb flex-a-i-c">
-      <a href="#" class="header__toggle" @click="navbarExpand = !navbarExpand">
-        <!-- <img src="images/icon-menu.svg" alt=""> -->
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
       <div class="header__logo">
         <!--          <img src="images/logo.svg" alt="">-->
         <slot name="logo"></slot>
@@ -27,6 +21,12 @@
           <!--            <img src="images/image-avatar.png" alt="">-->
         </div>
       </div>
+      <a href="#" class="header__toggle" @click="navbarExpand = !navbarExpand">
+        <!-- <img src="images/icon-menu.svg" alt=""> -->
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
     </nav>
     <!--Menu for mobile-->
     <div class="header__menu">
@@ -43,8 +43,8 @@
 <script>
 export default {
   name: "TheNavbar",
-  data(){
-    return{
+  data() {
+    return {
       navbarExpand: false
     }
   }
@@ -201,7 +201,8 @@ export default {
     position: fixed;
     top: 4.8rem;
     margin: 0;
-    width: 60%;
+    //width: 60%;
+    width: 100%;
     left: -100%;
     background: white;
     text-align: left;
